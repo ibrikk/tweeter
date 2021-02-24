@@ -5,6 +5,12 @@
  */
 $(document).ready(function() { 
 
+  const textNode = str => {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
  const createTweetElement = obj => {
    const $header = `
     <header class="tweet">
@@ -15,7 +21,7 @@ $(document).ready(function() {
     <p class="tweet-logname profile bold">${obj.user.handle}</p>
     </header>`
 
-    const $p = `<p class="tweet-input bold">${obj.content.text}</p>`;
+    const $p = `<p class="tweet-input bold">${textNode(obj.content.text)}</p>`;
 
     const $footer = `
     <footer>
@@ -39,18 +45,19 @@ $(document).ready(function() {
 const renderTweets = tweets => {
   const $tweetsContainer = $('#tweets-container');
   for (let tweet of tweets) {
-    console.log(createTweetElement(tweet));
-    $tweetsContainer.append(createTweetElement(tweet));
+    $tweetsContainer.prepend(createTweetElement(tweet));
   }
 
 }
 
 const loadTweets = () => {
   $.ajax('/tweets', {
-    method: 'GET'
+    method: 'GET',
+    success: response => renderTweets(response)
   })
+  console.log('response');
+  console.log(response);
 }
-
 
 
 
@@ -59,16 +66,20 @@ $('#tweet-text').on('submit', function(event) {
   // console.log('this');
   // console.log(this);
   const data = $(this).serialize();
-  $.ajax('/tweets', {
-    method: 'POST', 
-    data,
-    success: () => console.log(data)
-    }
+  if (!data.slice(5)) {
+    alert("Type something");
+  } else if (data.slice(5).length > 140) {
+    alert("Your tweet is over 140 characters!");
+  } else {
+    $.ajax('/tweets', {
+      method: 'POST', 
+      data,
+      success: () => $("#tweet-text-area").val('')
+      
   })
+}
+loadTweets();
 })
- 
-
-
 });
 
 
