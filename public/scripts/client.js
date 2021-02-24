@@ -5,7 +5,7 @@
  */
 $(document).ready(function() { 
 
-  const textNode = str => {
+  const escape = str => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -21,7 +21,7 @@ $(document).ready(function() {
     <p class="tweet-logname profile bold">${obj.user.handle}</p>
     </header>`
 
-    const $p = `<p class="tweet-input bold">${textNode(obj.content.text)}</p>`;
+    const $p = `<p class="tweet-input bold">${escape(obj.content.text)}</p>`;
 
     const $footer = `
     <footer>
