@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="styles/header.css" type="text/css" />
     <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="styles/tweet-container.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -50,9 +51,31 @@
           <textarea placeholder='What are you humming about?' name="text" id="tweet-text"></textarea>
           <input class='button' type='submit' value='Tweet'>
             <span name="counter" class="counter" for="tweet-text">140   </span>
-          
         </form>
       </section>
+
+      <div id='tweet-container'>
+        <article>
+          <header class='tweet'>
+            <span class='tweet-profile'>
+              <img src="/images/profile-hex.png"> 
+              <p class='tweet-name profile bold'> Ibrahim Khalilov </p>
+            </span>
+            <p class='tweet-logname profile bold'> @ibrik  </p> 
+          </header>
+          
+            <p class='tweet-input'> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum </p>
+          
+          <footer>
+            <h5 class='days-ago bold'>x days ago</h5>
+            <div class='icons'>
+              <a><img src="https://www.flaticon.com/svg/vstatic/svg/725/725689.svg?token=exp=1614128652~hmac=9f64081a0dd18809e25f3a8908619045" alt="flag"></a>
+              <a><img src="https://image.flaticon.com/icons/svg/3/3890.svg" alt="retweet"></a>
+              <a><img src="https://image.flaticon.com/icons/svg/4/4458.svg" alt="like"></a>
+            </div>
+          </footer>
+        </article>
+      </div>
 
 
     </main>

@@ -2,6 +2,9 @@
   position: fixed;
   height: 120px;
   width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: #4056A1;
   color: #FFFFFF;
   font-family: 'Bungee', sans-serif;

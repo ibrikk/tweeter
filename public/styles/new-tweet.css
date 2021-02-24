@@ -1,7 +1,7 @@
 .new-tweet textarea {
   background: transparent;
   border: none;
-  border-bottom: 3px solid #545149;
+  border-bottom: 6px solid #545149;
   width: 100%;
   font-weight: bold;
 }

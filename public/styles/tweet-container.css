@@ -1,0 +1,70 @@
+article {
+  border: 6px solid #545149;
+}
+
+article footer {
+  padding: 0.5em;
+  margin: 4%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border: none;
+  border-top: 6px solid #545149;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+ margin: 0;
+  height: 40px;
+  font-size: 20px;
+}
+
+.tweet-logname {
+  margin-right: 5%;
+  display: none;
+}
+
+article:hover .tweet-logname {
+  display: inline;
+}
+
+article:hover .bold {
+  font-weight: bold;
+} 
+
+article .tweet {
+  padding: 0.5em;
+  margin: 2%;
+  margin-bottom: 0;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .tweet-profile {
+  display: inherit;
+}
+
+footer img {
+  height: 40px;
+  padding: 3px;
+}
+
+.tweet img {
+  padding-right: 5%;
+  height: 100px;
+}
+
+.tweet-input {
+  margin: 5%;
+  margin-top: 0;
+  overflow: auto;
+} 
+article {
+  overflow: auto;
+}
+
+article:hover {
+  box-shadow: 15px 200px #4056A1;
+}
