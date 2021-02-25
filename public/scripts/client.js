@@ -67,18 +67,24 @@ $('#tweet-text').on('submit', function(event) {
   // console.log(this);
   const data = $(this).serialize();
   if (!data.slice(5)) {
-    alert("Type something");
+    $('#alert-container').css('display', 'inherit');
+    $('.error-message').text('Type something!')
   } else if (data.slice(5).length > 140) {
-    alert("Your tweet is over 140 characters!");
+    $('#alert-container').css('display', 'inherit');
+    $('.error-message').text('Your tweet is over 140 characters!')
   } else {
     $.ajax('/tweets', {
       method: 'POST', 
       data,
-      success: () => $("#tweet-text-area").val('')
+      success: function() {
+        $("#tweet-text-area").val('');
+        $("#alert-container").css("display", "none");
+        loadTweets();
+      } 
       
   })
 }
-loadTweets();
+
 })
 });
 
