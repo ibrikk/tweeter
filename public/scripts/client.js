@@ -123,4 +123,6 @@ $('#scroll-up-btn').on('click', () => {
   document.documentElement.scrollTop = 0;
 })
 
+// SlideToggle btn not working
+// Name under profile-pic had to styled in html
 
