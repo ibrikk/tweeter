@@ -81,11 +81,22 @@ $('#tweet-text').on('submit', function(event) {
         $("#alert-container").css("display", "none");
         loadTweets();
       } 
-      
   })
 }
-
 })
 });
+
+$(document).on('scroll', () => {
+  if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+    $('#scroll-up-btn').css('display', block);
+  } else {
+    $('#scroll-up-btn').css('diplay', 'none');
+  }
+});
+
+$('#scroll-up-btn').on('click', () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+})
 
 

@@ -14,6 +14,24 @@ article footer {
   justify-content: space-between;
 }
 
+article .tweet {
+  padding: 0.5em;
+  margin: 2%;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+article .tweet img {
+  padding-right: 1.3em;
+  height: 4em;
+}
+
+footer img {
+  height: 30px;
+  padding: 3px;
+}
+
 footer p {
  margin: 0;
   height: 40px;
@@ -24,6 +42,9 @@ footer p {
   margin-right: 5%;
   display: none;
 }
+article:hover {
+  box-shadow: 15px 20px #3e556d72;
+}
 
 article:hover .tweet-logname {
   display: inline;
@@ -33,17 +54,12 @@ article:hover .bold {
   font-weight: bold;
 } 
 
-article .tweet {
-  padding: 0.5em;
-  margin: 2%;
-  margin-bottom: 0;
-  overflow: auto;
-  display: flex;
-  justify-content: space-between;
-}
-
 header .tweet-profile {
   display: inherit;
+}
+
+header .profile {
+  font-size: 1.3em;
 }
 
 footer img {
@@ -51,20 +67,27 @@ footer img {
   padding: 3px;
 }
 
-.tweet img {
-  padding-right: 5%;
-  height: 100px;
-}
 
 .tweet-input {
   margin: 5%;
   margin-top: 0;
-  overflow: auto;
-} 
-article {
-  overflow: auto;
+  overflow-wrap: break-word;
 }
 
-article:hover {
-  box-shadow: 15px 200px #4056A1;
+#tweets-container {
+  margin-bottom: 3em;
+}
+
+#scroll-up-btn {
+  z-index: 2000;
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+}
+
+#scroll-up-btn:hover {
+  cursor: pointer;
 }

@@ -1,3 +1,8 @@
+.new-tweet {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
 .new-tweet textarea {
   background: transparent;
   border: none;
@@ -15,6 +20,27 @@
 .counter {
   font-family: 'Bungee', sans-serif;
   float: right;
+}
+
+.outter-alert-container {
+  display: flex;
+  justify-content: center;
+}
+
+alert {
+  margin-top: 2em;
+  border: 5px solid #E2574C;
+  display: flex;
+}
+.alert img {
+  padding: 0.5em;
+  height: 4em;
+  width: 4em;
+}
+.alert p {
+  color: #E2574C;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 #alert-container {

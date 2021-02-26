@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+$page-color: #f4f1ec;
+$font-color: #545149;
+
+body {
+  display: flex;
+  margin-top: 120px;
+  color: $font-color;
+  background-color: $page-color;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (max-width: 1025px) {
+  main {
+    width: 90%;
+    margin: auto;
+  }
+  .profile {
+    margin-top: 2em;
+    width: 100%;
+    background-color: #b3c8d8;
+    background-image: url('https://www.transparenttextures.com/patterns/arches.png');
+  }
+  body {
+    display: block;
+  }
+
+  .fixed-top {
+    background-color: #b3c8d8;
+    background-image: url('https://www.transparenttextures.com/patterns/arches.png');
+    color: #ffffff;
+    font-family: 'Bungee', sans-serif;
+  }
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1025px) {
+  main {
+    width: 65%;
+    margin: 0 2em 0 2em;
+  }
+  .profile-pic {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 300px;
+      margin-top: 3em;
+    }
+  }
+  .profile {
+    height: 100vh;
+    width: 40%;
+  }
+  .profile-background {
+    position: fixed;
+    background-color: #b3c8d8;
+    background-image: url('https://www.transparenttextures.com/patterns/arches.png');
+    width: 35%;
+    height: 100%;
+    left: 0;
+  }
+
+  .fixed-top {
+    background-color: #b3c8d8;
+    color: #ffffff;
+    font-family: 'Bungee', sans-serif;
+  }
+}

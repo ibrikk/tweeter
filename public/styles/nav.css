@@ -5,15 +5,31 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: #4056A1;
-  color: #FFFFFF;
-  font-family: 'Bungee', sans-serif;
-  padding: 1.5em;
-
+  padding: 1.5em 1.5em 0 1.5em;
 }
 
-nav .nav-link {
+.logo {
   float: right;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
+.slider {
+  float: right;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+@keyframes moveup {
+  0% {
+    bottom: 0px;
+  }
+  25% {
+    bottom: 1px;
+  }
+  50% {
+    bottom: 2px;
+  }
+}

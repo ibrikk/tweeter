@@ -29,28 +29,35 @@
     <!-- Top nav bar (fixed) -->
     <nav class="fixed-top">
       <span class="logo">tweeter</span>
+      <div class="slider">
       <a class="nav-link"><strong>Write</strong> a new tweet</a>
+    </div>
     </nav>
 
     <header class="profile">
+      <div class="profile-background">
       <div class="profie-pic">
-          <img src="/images/profile-hex.png"  alt="profile-picture"> 
+        <img src="/images/profile-hex.png"  alt="profile-picture"> 
+        <br>
       </div>
       <br>
       <div class="profile-name">
-          <h2>Ibrahim</h2>
+          <h2>Name</h2>
       </div>
+    </div>
   </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
 
+      <div class="outter-alert-container" >
       <div id="alert-container">
         <section class="alert">
           <img src="images/463612.svg" alt="error icon">
           <p class="error-message">Error Message!</p>
         </section>
       </div>
+    </div>
 
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
@@ -63,7 +70,9 @@
 
       <div id="tweets-container">
       </div>
-
+    
+      <button id="scroll-up-btn"><img src="images/96.png"></button>
+    
 
     </main>
   </body>
