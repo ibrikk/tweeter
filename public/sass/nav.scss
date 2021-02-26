@@ -26,6 +26,16 @@ $title-font: 'Bungee', sans-serif;
   font-family: $secondary-font;
 }
 
+.toggle-btn img {
+  height: 1.5em;
+  position: absolute;
+}
+
+.toggle-btn img:hover {
+  animation: moveup 0.5s linear infinite;
+  cursor: pointer;
+}
+
 @keyframes moveup {
   0% {bottom: 0px}
   25% {bottom: 1px}

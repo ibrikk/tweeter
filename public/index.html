@@ -31,6 +31,9 @@
       <span class="logo">tweeter</span>
       <div class="slider">
       <a class="nav-link"><strong>Write</strong> a new tweet</a>
+      <a class="toggle-btn"
+					><img src="images/96.png" alt="slide-down"
+				/></a>
     </div>
     </nav>
 
@@ -40,7 +43,7 @@
         <img src="/images/profile-hex.png"  alt="profile-picture"> 
         <br>
       </div>
-      <br>
+      <br />
       <div class="profile-name">
           <h2>Name</h2>
       </div>
@@ -62,18 +65,15 @@
       <section class="new-tweet">
         <h2><i>Compose Tweet</i></h2>
         <form id="tweet-text">
-          <textarea id="tweet-text-area" name="text" placeholder='What are you humming about?' name="text" id="tweet-text"></textarea>
+          <textarea id="tweet-text-area" name="text" placeholder='What are you humming about?' name="text"></textarea>
           <input id="submit-tweet" class="bungee" type="submit" value=Tweet>
-            <span name="counter" class="counter" for="tweet-text">140   </span>
+            <span name="counter" class="counter bungee" for="tweet-text">140</span>
         </form>
       </section>
 
-      <div id="tweets-container">
-      </div>
+      <div id="tweets-container"></div>
     
-      <button id="scroll-up-btn"><img src="images/96.png"></button>
-    
-
+      <button id="scroll-up-btn"><img src="images/up.png"></button>
     </main>
   </body>
 </html>

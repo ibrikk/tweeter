@@ -45,7 +45,7 @@ $(document).ready(function() {
 
     const $footer = `
     <footer>
-    <p class="tweet-days bold">${obj.created_at}</p> 
+    <p class="tweet-days bold">${createdAt(obj.created_at)}</p> 
     <div class="tweet-icons">
       <a><img src="https://www.flaticon.com/svg/vstatic/svg/725/725689.svg?token=exp=1614128652~hmac=9f64081a0dd18809e25f3a8908619045" alt="flag"></a>
       <a><img src="https://image.flaticon.com/icons/svg/3/3890.svg" alt="retweet"></a>
@@ -74,11 +74,10 @@ const loadTweets = () => {
   $.ajax('/tweets', {
     method: 'GET',
     success: response => renderTweets(response)
-  })
-  console.log('response');
-  console.log(response);
-}
+  });
+};
 
+loadTweets();
 
 
 $('#tweet-text').on('submit', function(event) {
@@ -105,6 +104,10 @@ $('#tweet-text').on('submit', function(event) {
   })
 }
 })
+});
+
+$(".toggle-btn").on("click", function() {
+  $(".new-tweet").slideToggle();
 });
 
 $(document).on('scroll', () => {
