@@ -30,7 +30,6 @@ $(document).ready(function() {
     }
   }
 
-
  const createTweetElement = obj => {
    const $header = `
     <header class="tweet">
@@ -79,12 +78,12 @@ const loadTweets = () => {
 
 loadTweets();
 
-
 $('#tweet-text').on('submit', function(event) {
   event.preventDefault();
   // console.log('this');
   // console.log(this);
   const data = $(this).serialize();
+  // console.log(data)
   if (!data.slice(5)) {
     $('#alert-container').css('display', 'inherit');
     $('.error-message').text('Type something!')
@@ -107,7 +106,7 @@ $('#tweet-text').on('submit', function(event) {
 });
 
 $(".toggle-btn").on("click", function() {
-  $(".new-tweet").slideToggle();
+  $(".new-tweet").slideToggle()
 });
 
 $(document).on('scroll', () => {
@@ -121,8 +120,8 @@ $(document).on('scroll', () => {
 $('#scroll-up-btn').on('click', () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+  console.log('Clicked')
 })
 
 // SlideToggle btn not working
 // Name under profile-pic had to styled in html
-

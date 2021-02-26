@@ -22,11 +22,6 @@
   float: right;
 }
 
-.outter-alert-container {
-  display: flex;
-  justify-content: center;
-}
-
 alert {
   margin-top: 2em;
   border: 5px solid #E2574C;
