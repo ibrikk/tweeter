@@ -1,25 +1,37 @@
 .fixed-top {
   position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
   height: 120px;
   width: 100vw;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 1.5em 1.5em 0 1.5em;
 }
 
 .logo {
-  float: right;
+  font-size: 1.2em;
 }
 
-.slider {
+.new-tweet-slider {
   float: right;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-link {
   font-family: "Source Sans Pro", sans-serif;
+}
+
+.toggle-btn img {
+  height: 1.5em;
+  position: absolute;
+}
+
+.toggle-btn img:hover {
+  animation: moveup 0.5s linear infinite;
+  cursor: pointer;
 }
 
 @keyframes moveup {

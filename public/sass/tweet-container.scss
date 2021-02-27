@@ -39,14 +39,14 @@ footer {
   }
 }
 
-.tweet-logname {
+.tweet-handle {
   margin-right: 2%;
   display: none;
 }
 
 article:hover {
   box-shadow: 15px 20px #3e556d72;
-  .tweet-logname {
+  .tweet-handle {
     display: inline;
   }
   .bold {
@@ -55,7 +55,7 @@ article:hover {
 }
 
 header {
-  .tweet-profile {
+  .tweet-avatar {
     display: inherit;
   }
   .profile {

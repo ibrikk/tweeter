@@ -1,9 +1,10 @@
-.profile {
+.avatar {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.profile-pic {
+.avatar-pic {
   height: 100%;
   h2 {
     margin-top: 0;

@@ -1,16 +1,15 @@
-.profile {
+.avatar {
   display: flex;
-  padding: 300px;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.profile-pic {
+.avatar-pic {
   height: 100%;
 }
 
-.profile-pic h2 {
+.avatar-pic h2 {
   margin-top: 0;
   text-align: center;
   font-family: "Bungee", sans-serif;
 }
-

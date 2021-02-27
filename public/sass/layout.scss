@@ -33,7 +33,7 @@ body {
     width: 90%;
     margin: auto;
   }
-  .profile {
+  .avatar {
     margin-top: 2em;
     width: 100%;
     background-color: #b3c8d8;
@@ -58,18 +58,18 @@ body {
     margin: 0 2em 0 2em;
     min-width: 40%;
   }
-  .profile-pic {
+  .avatar-pic {
     height: 100%;
     display: flex;
-    justify-content: center;
-    
+    flex-direction: column;
+    align-items: center;
     
     img {
       height: 300px;
       margin-top: 2.5em;
     }
   }
-  .profile {
+  .avatar {
     height: 100vh;
     width: 40%;
   }
@@ -77,7 +77,7 @@ body {
     position: fixed;
     background-color: #b3c8d8;
     background-image: url('https://www.transparenttextures.com/patterns/arches.png');
-    width: 40%;
+    width: 35%;
     height: 100%;
     left: 0;
     ;

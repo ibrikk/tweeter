@@ -9,17 +9,18 @@ $title-font: 'Bungee', sans-serif;
   z-index: 1000;
   height: 120px;
   width: 100vw;
-  padding: 1.5em 1.5em 1.5em;
+  padding: 1.5em 1.5em 0 1.5em;
 }
 
 .logo {
   font-size: 1.2em;
 }
 
-.slider {
+.new-tweet-slider {
   float: right;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-link {

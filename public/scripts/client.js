@@ -33,18 +33,18 @@ $(document).ready(function() {
  const createTweetElement = obj => {
    const $header = `
     <header class="tweet">
-    <span class="tweet-profile">
+    <span class="tweet-avatar">
     <img src=${obj.user.avatars}>
     <p class="tweet-name profile bold">${obj.user.name}</p>
     </span>
-    <p class="tweet-logname profile bold">${obj.user.handle}</p>
+    <p class="tweet-handle profile bold">${obj.user.handle}</p>
     </header>`
 
-    const $p = `<p class="tweet-input bold">${escape(obj.content.text)}</p>`;
+    const $p = `<div class="tweet-input bold">${escape(obj.content.text)}</div>`;
 
     const $footer = `
     <footer>
-    <p class="tweet-days bold">${createdAt(obj.created_at)}</p> 
+    <p class="tweet-days bold">${createdAt(obj.created_at)} ago</p> 
     <div class="tweet-icons">
       <a><img src="https://www.flaticon.com/svg/vstatic/svg/725/725689.svg?token=exp=1614128652~hmac=9f64081a0dd18809e25f3a8908619045" alt="flag"></a>
       <a><img src="https://image.flaticon.com/icons/svg/3/3890.svg" alt="retweet"></a>
@@ -66,13 +66,14 @@ const renderTweets = tweets => {
   for (let tweet of tweets) {
     $tweetsContainer.prepend(createTweetElement(tweet));
   }
-
-}
+};
 
 const loadTweets = () => {
   $.ajax('/tweets', {
     method: 'GET',
-    success: response => renderTweets(response)
+    success: function(response) {
+      renderTweets(response);
+    }
   });
 };
 
@@ -80,8 +81,6 @@ loadTweets();
 
 $('#tweet-text').on('submit', function(event) {
   event.preventDefault();
-  // console.log('this');
-  // console.log(this);
   const data = $(this).serialize();
   // console.log(data)
   if (!data.slice(5)) {
@@ -100,28 +99,28 @@ $('#tweet-text').on('submit', function(event) {
         $("#alert-container").css("display", "none");
         loadTweets();
       } 
-  })
+  });
 }
-})
 });
+
 
 $(".toggle-btn").on("click", function() {
   $(".new-tweet").slideToggle()
 });
 
-$(document).on('scroll', () => {
-  if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
-    $('#scroll-up-btn').css('display', block);
+$(document).on('scroll', function() {
+  if (
+    document.body.scrollTop > 120 ||
+    document.documentElement.scrollTop > 120
+  ) {
+    $("#scroll-up-btn").css("display", "block");
   } else {
-    $('#scroll-up-btn').css('diplay', 'none');
+    $("#scroll-up-btn").css("display", "none");
   }
 });
 
-$('#scroll-up-btn').on('click', () => {
+$("#scroll-up-btn").on("click", function() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-  console.log('Clicked')
-})
-
-// SlideToggle btn not working
-// Name under profile-pic had to styled in html
+});
+});
