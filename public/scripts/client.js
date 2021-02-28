@@ -46,7 +46,7 @@ $(document).ready(function() {
     <footer>
     <p class="tweet-days bold">${createdAt(obj.created_at)} ago</p> 
     <div class="tweet-icons">
-      <a><img src="https://www.flaticon.com/svg/vstatic/svg/725/725689.svg?token=exp=1614128652~hmac=9f64081a0dd18809e25f3a8908619045" alt="flag"></a>
+      <a><img src="https://www.flaticon.com/svg/vstatic/svg/2164/2164609.svg?token=exp=1614532432~hmac=0e9246f0f54739e9420d467edbfa6853" alt="flag"></a>
       <a><img src="https://image.flaticon.com/icons/svg/3/3890.svg" alt="retweet"></a>
       <a><img src="https://image.flaticon.com/icons/svg/4/4458.svg" alt="like"></a>
     </div>
