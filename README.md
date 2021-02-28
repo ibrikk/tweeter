@@ -15,3 +15,6 @@ A simple single-page AJAX-based Twitter clone that uses jQuery, HTML5, and SASS.
 
 - Express
 - Node 5.10.x or above
+
+
+![tweeter-box.png](https://github.com/ibrikk/tweeter/blob/master/public/docs/tweet-box.gif)
